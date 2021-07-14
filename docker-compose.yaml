@@ -1,0 +1,12 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - 80:80
+    environment:
+      - "APP_PORT=80"
+      - "LOGIN_POSTGRES=postgres"
+      - "PASSWORD_POSTGRES=123"
+      - "DB_URL=jdbc:postgresql://192.168.1.4:5432/drink_db"
